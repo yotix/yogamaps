@@ -1,7 +1,7 @@
 run = false;
 once  = false;
 console.time('%cinitializing YogaMaps','color:purple;font-size:large;');
-console.log('%cCreated by Yogesh Bhardwaj, If errors contact at yogi@yurii.com','color:purple;font-size:large');function myMaps(addressFieldId,idmap,LatId,LngId)
+console.log('%cCreated by Yogesh Bhardwaj, If errors contact at yogesh.bhardwaj@hotmail.com','color:purple;font-size:large');function myMaps(addressFieldId,idmap,LatId,LngId)
 {
 	// console.log(addressFieldId+' '+idmap);
   if (idmap != 'none' && run != true)
