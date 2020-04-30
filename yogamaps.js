@@ -1,7 +1,6 @@
 run = false;
 once  = false;
 console.time('%cinitializing YogaMaps','color:purple;font-size:large;');
-console.log('%cCreated by Yogesh Bhardwaj, If errors contact at yogesh.bhardwaj@hotmail.com','color:purple;font-size:large');function myMaps(addressFieldId,idmap,LatId,LngId)
 {
 	// console.log(addressFieldId+' '+idmap);
   if (idmap != 'none' && run != true)
@@ -34,7 +33,6 @@ console.log('%cCreated by Yogesh Bhardwaj, If errors contact at yogesh.bhardwaj@
       window.alert("Autocomplete's returned place contains no geometry");
       return;
     }
-		// console.log(place.geometry.location.lat()+ ' ' +place.geometry.location.lng());
 		document.getElementById(LatId).value = place.geometry.location.lat();
 		document.getElementById(LngId).value = place.geometry.location.lng();
 
@@ -145,12 +143,10 @@ function geocodePosition(pos) {
 
 			if (responses && responses.length > 0) {
 					address = [
-					//  (responses[0].address_components[0] && responses[0].address_components[0].short_name || ''),
 						(responses[0].address_components[1] && responses[0].address_components[1].short_name || ''),
 						(responses[0].address_components[2] && responses[0].address_components[2].short_name || '')
 					].join(' ');
 				marker.formatted_address = responses[0].formatted_address;
-				// console.log(address);
 			} else {
 				marker.formatted_address = 'Cannot determine address at this location.';
 			}
@@ -158,7 +154,6 @@ function geocodePosition(pos) {
 			document.getElementById(LngId).value = responses[0].geometry.location.lng();
 			document.getElementById(addressFieldId).value = responses[0].formatted_address;
 
-      // console.log(responses[0].geometry.location.lat()+ ' ' + responses[0].geometry.location.lng());
 			infowindow.setContent(address);
 			infowindow.open(map, marker);
 		});
